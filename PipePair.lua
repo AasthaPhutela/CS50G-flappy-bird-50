@@ -3,8 +3,11 @@ PipePair = Class{}
 
 function PipePair:init(y)
   self.y = y
+
   self.x = VIRTUAL_WIDTH + 32
+
   self.gap_height = math.random(85, 95)
+  
   self.pipes = {
     ['upper'] = Pipe('top', self.y),
     ['lower'] = Pipe('bottom', self.y + PIPE_HEIGHT + self.gap_height)
